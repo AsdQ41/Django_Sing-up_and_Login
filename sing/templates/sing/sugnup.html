@@ -1,0 +1,17 @@
+{% extends 'sing/base.html' %}
+
+{% block title %}
+Sing Up
+{% endblock %}
+
+{% block content %}
+<div class='container text-center'>
+    <h1>Sing up</h1>
+    <h2>{{ error }} </h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class='btn btn-primary'>Sing Up</button>
+    </form>
+</div>
+{% endblock %}
